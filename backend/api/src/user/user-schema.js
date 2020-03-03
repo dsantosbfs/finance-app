@@ -3,7 +3,8 @@ const mongoose = restful.mongoose;
 
 const userSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now },
-  email: { type: Boolean, required: true },
+  email: { type: String, required: true, unique: true },
+  hash: { type: String, required: true },
   name: { type: String, required: true },
   surname: { type: String, required: true },
 });
