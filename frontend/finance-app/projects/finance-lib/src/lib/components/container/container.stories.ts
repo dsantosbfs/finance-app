@@ -5,7 +5,7 @@ import { centered } from '@storybook/addon-centered/angular';
 import { ContainerComponent } from './container.component';
 import readme from './README.md';
 
-const stories = storiesOf('Button', module);
+const stories = storiesOf('Container', module);
 
 stories.addDecorator(withKnobs);
 stories.addDecorator(centered);
