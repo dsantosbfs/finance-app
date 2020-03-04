@@ -15,7 +15,7 @@ server.use(jwt());
 server.use(errorHandler);
 
 server.listen(port, () => {
-    console.log(`Run on port number ${port}`);
+  console.log(`Run on port number ${port}`);
 });
 
 module.exports = server;
