@@ -20,12 +20,10 @@
       "dom"
     ],
     "paths": {
-      "finance-lib": [
-        "dist/finance-lib"
-      ],
-      "finance-lib/*": [
-        "dist/finance-lib/*"
-      ]
+      "finance-lib": ["dist/finance-lib"],
+      "finance-lib/*": ["dist/finance-lib/*"],
+      "node_modules": ["node_modules"],
+      "node_modules/*": ["node_modules/*"]
     }
   },
   "angularCompilerOptions": {
