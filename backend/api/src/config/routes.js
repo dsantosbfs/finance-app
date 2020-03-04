@@ -1,7 +1,10 @@
+'use strict';
+
 const express = require('express');
 const router = express.Router();
 
 const userService = require('../user/user-service');
+const entriesService = require('../entries/entries-service');
 
 module.exports = (server) => {
   server.use('/api', router);
@@ -25,4 +28,5 @@ module.exports = (server) => {
   });
 
   userService.user.register(router, '/users');
+  entriesService.user.register(router, '/entries');
 };

@@ -1,3 +1,5 @@
+'use strict';
+
 const bcrypt = require('bcryptjs');
 const config = require('../config/config.json');
 const jwt = require('jsonwebtoken');

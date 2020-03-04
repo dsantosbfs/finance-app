@@ -1,3 +1,5 @@
+'use strict';
+
 const config = require('./config.json');
 const expressJwt = require('express-jwt');
 const userService = require('../user/user-service');
