@@ -12,19 +12,18 @@
     "importHelpers": true,
     "target": "es2015",
     "typeRoots": [
-      "node_modules/@types"
+      "node_modules/@types",
+      "./typings.d.ts",
     ],
     "lib": [
       "es2018",
       "dom"
     ],
     "paths": {
-      "finance-lib": [
-        "dist/finance-lib"
-      ],
-      "finance-lib/*": [
-        "dist/finance-lib/*"
-      ]
+      "finance-lib": ["dist/finance-lib"],
+      "finance-lib/*": ["dist/finance-lib/*"],
+      "node_modules": ["node_modules"],
+      "node_modules/*": ["node_modules/*"]
     }
   },
   "angularCompilerOptions": {

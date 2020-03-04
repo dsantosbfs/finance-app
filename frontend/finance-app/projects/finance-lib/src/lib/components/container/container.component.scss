@@ -1,0 +1,8 @@
+@import '../../shared/scss/main';
+
+.container {
+
+  &.disabled {
+    opacity: .3;
+  }
+}

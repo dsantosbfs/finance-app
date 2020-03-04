@@ -5,7 +5,13 @@
     "types": [
       "jasmine",
       "node"
-    ]
+    ],
+    "paths": {
+      "finance-lib": ["dist/finance-lib"],
+      "finance-lib/*": ["dist/finance-lib/*"],
+      "node_modules": ["node_modules"],
+      "node_modules/*": ["node_modules/*"]
+    }
   },
   "files": [
     "src/test.ts",

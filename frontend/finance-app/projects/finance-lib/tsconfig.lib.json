@@ -9,7 +9,11 @@
     "lib": [
       "dom",
       "es2018"
-    ]
+    ],
+    "paths": {
+      "node_modules": ["node_modules"],
+      "node_modules/*": ["node_modules/*"]
+    }
   },
   "angularCompilerOptions": {
     "annotateForClosureCompiler": true,
