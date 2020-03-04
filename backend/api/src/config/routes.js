@@ -28,5 +28,5 @@ module.exports = (server) => {
   });
 
   userService.user.register(router, '/users');
-  entriesService.user.register(router, '/entries');
+  entriesService.register(router, '/entries');
 };
