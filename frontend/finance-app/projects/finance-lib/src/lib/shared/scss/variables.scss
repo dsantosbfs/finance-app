@@ -1,0 +1,33 @@
+/* Colors */
+
+$ui--primary: #3d2892;
+$ui--primary-light: #6e5eae;
+$ui--primary-lighter: #cec9e4;
+
+$ui--black: #1e1e1e;
+$ui--white: #ffffff;
+
+$ui--gray-lighter: #d9dce4;
+$ui--gray-lighter-1: #f5f6f8;
+$ui--gray-lighter-2: #b9babc;
+$ui--gray-lighter-3: #f1f1f1;
+$ui--gray-lighter-4: #e7e9ed;
+$ui--gray-light: #737373;
+$ui--gray-light-1: #97999b;
+$ui--gray: #747679;
+
+$ui--alpha-gray-20: rgba(7, 18, 37, .2);
+$ui--alpha-gray-50: rgba(160, 169, 186, .5);
+$ui--alpha-gray-80: rgba(0, 0, 0, .8);
+
+$ui--error: #c14134;
+$ui--success: #2ecc71;
+$ui--warning: #ffdb58;
+
+/* Shadows */
+
+$ui--shadow-one: 0 2px 8px 0 $ui--alpha-gray-20;
+
+/* Borders */
+
+$ui--border-radius-default: 4px;
