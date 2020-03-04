@@ -119,6 +119,41 @@
           }
         }
       }
+    },
+    "finance-lib": {
+      "projectType": "library",
+      "root": "projects/finance-lib",
+      "sourceRoot": "projects/finance-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/finance-lib/tsconfig.lib.json",
+            "project": "projects/finance-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/finance-lib/src/test.ts",
+            "tsConfig": "projects/finance-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/finance-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/finance-lib/tsconfig.lib.json",
+              "projects/finance-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "finance-app"
 }
