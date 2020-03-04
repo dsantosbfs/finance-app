@@ -22,7 +22,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run lint:sass && npm run list-todos",
+      "pre-commit": "npm run lint && npm run lint:sass",
       "pre-push": "npm run test"
     }
   },
@@ -87,5 +87,8 @@
     "tsickle": "^0.35.0",
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
+  },
+  "optionalDependencies": {
+    "finance-lib": "file:dist/finance-lib/finance-lib-0.0.1.tgz"
   }
 }
