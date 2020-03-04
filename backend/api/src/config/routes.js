@@ -12,7 +12,7 @@ module.exports = (server) => {
       .catch(err => next(err));
   });
 
-  router.post('/users', (req, res, next) => {
+  router.post('/register', (req, res, next) => {
     userService.register(req.body)
       .then(() => res.json({ message: 'Successfully registered user'}))
       .catch(err => next(err));

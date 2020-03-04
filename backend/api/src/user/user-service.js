@@ -48,4 +48,8 @@ async function update(id, userParam) {
   await userData.save();
 }
 
-module.exports = { user, authenticate, register, update };
+async function getById(id) {
+  return await user.findById(id).select('-hash');
+}
+
+module.exports = { user, authenticate, register, update, getById };
