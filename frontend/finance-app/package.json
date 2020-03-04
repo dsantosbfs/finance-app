@@ -2,12 +2,29 @@
   "name": "finance-app",
   "version": "0.0.0",
   "scripts": {
+    "build": "npm run build:prod",
+    "build:dev": "ng build --prod  --configuration=dev",
+    "build:lib": "ng build finance-lib",
+    "build:prod": "npm i && npm run update:lib && ng build --prod --aot --build-optimizer --progress --verbose",
+    "build:storybook": "build-storybook -c .storybook -o dist/storybook",
+    "e2e": "ng e2e",
+    "lint": "ng lint finance-app && ng lint finance-lib",
+    "lint:fix": "ng lint finance-app --fix && sass-lint-auto-fix",
+    "lint:sass": "sass-lint -v -q",
     "ng": "ng",
+    "pack:lib": "cd dist/finance-lib && npm pack",
     "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "storybook": "start-storybook -s ./src/assets -p 9000",
+    "test": "ng test --code-coverage --watch=false --sourceMap=true  --browsers=ChromeHeadless",
+    "test:app": "ng test finance-app --code-coverage --sourceMap=true",
+    "test:lib": "ng test finance-lib --code-coverage --sourceMap=true",
+    "update:lib": "npm run build:lib && npm run pack:lib && npm i --save-optional dist/finance-lib/finance-lib-0.0.1.tgz"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run lint:sass && npm run list-todos",
+      "pre-push": "npm run test"
+    }
   },
   "private": true,
   "dependencies": {
