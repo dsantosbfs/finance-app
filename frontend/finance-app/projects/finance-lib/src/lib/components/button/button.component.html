@@ -1,0 +1,9 @@
+<button
+  (click)="onClick($event)"
+  [attr.aria-label]="label"
+  [disabled]="disabled"
+  [ngClass]="['btn-' + appearence, loading ? 'loading' : '', size]"
+  [type]="type"
+>
+  <ng-content></ng-content>
+</button>
